@@ -1,11 +1,17 @@
 <template>
-  <div id = "temp">
+  <div id = "app">
+    <topbar></topbar>
+    <homecontent></homecontent>
   </div>
 </template>
 
 <script>
+import topbar from '@/components/TopBar'
+import homecontent from '@/components/HomeContent'
+
 export default {
-  name: 'temp'
+  name: 'app',
+  components:{ topbar, homecontent}
 }
 </script>
 
