@@ -2,6 +2,9 @@
   <div id = "app">
     <topbar></topbar>
     <homecontent></homecontent>
+
+
+    
   </div>
 </template>
 
