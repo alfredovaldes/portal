@@ -9,7 +9,7 @@
                 <div class="collapse navbar-toggleable-sm float-md-right" id="menuprincipal">
 
                     <ul class="nav navbar-nav">
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a class="nav-link" href="#bienvenidos" v-smooth-scroll>Inicio</a>
                         </li>
 
@@ -21,7 +21,7 @@
                             <a class="nav-link" href="#contacto" v-smooth-scroll>Contacto</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Login</a>
+                            <router-link to="login" class="nav-link">Login</router-link>
                         </li>
                     </ul>
                 </div>

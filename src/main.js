@@ -3,9 +3,12 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import Vuetify from 'vuetify'
 import vueSmoothScroll from 'vue-smooth-scroll'
+import('../node_modules/vuetify/dist/vuetify.min.css')
 
 Vue.config.productionTip = false
+Vue.use(Vuetify)
 Vue.use(vueSmoothScroll)
 
 /* eslint-disable no-new */

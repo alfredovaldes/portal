@@ -15,7 +15,7 @@
                 <a href="#" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#quienes-somos">MAS INFORMACIÓN</a>
             </div>
         </section>
-        <footer id="contacto" class="footer   py-2 text-xs-center">
+        <footer id="contacto" class="footer py-2 text-xs-center">
             <div class="container">
                 <p>UAdeC</p>
             </div>
