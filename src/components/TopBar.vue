@@ -10,25 +10,18 @@
 
                     <ul class="nav navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">Inicio</a>
+                            <a class="nav-link" href="#bienvenidos">Inicio</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Nosotros</a>
+                            <a class="nav-link" href="#quienes-somos">Nosotros</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#"> Servicios</a>
-                        </li>
+                            <a class="nav-link" href="#ultimos-proyectos"> Servicios</a>
+                            
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Paradas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Ruta</a>
-
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contacto</a>
+                            <a class="nav-link" href="#contacto">Contacto</a>
                         </li>
                     </ul>
                 </div>
