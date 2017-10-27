@@ -10,18 +10,18 @@
 
                     <ul class="nav navbar-nav">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#bienvenidos">Inicio</a>
+                            <a class="nav-link" href="#bienvenidos" v-smooth-scroll>Inicio</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#quienes-somos">Nosotros</a>
+                            <a class="nav-link" href="#quienes-somos" v-smooth-scroll>Nosotros</a>
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" href="#ultimos-proyectos"> Servicios</a>
-                            
+                            <a class="nav-link" href="#contacto" v-smooth-scroll>Contacto</a>
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#contacto">Contacto</a>
+                            <a class="nav-link" href="#">Login</a>
                         </li>
                     </ul>
                 </div>

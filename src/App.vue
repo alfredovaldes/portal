@@ -1,17 +1,16 @@
 <template>
   <div id = "app">
     <topbar></topbar>
-    <homecontent></homecontent>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
 import topbar from '@/components/TopBar'
-import homecontent from '@/components/HomeContent'
 
 export default {
   name: 'app',
-  components:{ topbar, homecontent}
+  components:{ topbar }
 }
 </script>
 

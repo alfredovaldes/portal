@@ -3,7 +3,7 @@
         <section id="bienvenidos" class="bienvenidos">
             <div class="texto-bienvenido text-xs-center">
                 <p class="h5">Bievenidos a nuestro sitio</p>
-                <h1 class="display-4 mb-3">CombiSaltillo</h1>
+                <h1 class="display-4 mb-3">UberSaltillo</h1>
                 <a href="#" class="btn btn-primary btn-lg">Ponte en contacto</a>
             </div>
         </section>
@@ -13,33 +13,6 @@
                 <h2 class="h3">¿QUIENES SOMOS?</h2>
                 <p>Ponemos a tu alcance el servicio de localizacion de autobuses</p>
                 <a href="#" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#quienes-somos">MAS INFORMACIÓN</a>
-            </div>
-        </section>
-        <section id="ultimos-proyectos" class="ultimos-proyectos py-2 text-xs-center">
-            <div class="container">
-                <h2 class="h3 mb-3"> Servicios</h2>
-                <div class="row">
-                    <div class="col-md-4">
-                        <a href="#">
-                            <img :src="chofer" alt="chofer" width="290" class="img-fluid m-x-auto">
-                        </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#"> <img :src="paradas" alt="paradas" width="290" class="img-fluid m-x-auto"> </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#"> <img :src="bus" alt="bus" width="290" class="img-fluid m-x-auto"> </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#"> <img :src="ubicacion" alt="ubicacion" width="290" class="img-fluid m-x-auto"> </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#"> <img :src="proyecto5" alt="Proyecto 5" width="290" class="img-fluid m-x-auto"> </a>
-                    </div>
-                    <div class="col-md-4">
-                        <a href="#"> <img :src="proyecto6" alt="Proyecto 6" width="290" class="img-fluid m-x-auto"> </a>
-                    </div>
-                </div>
             </div>
         </section>
         <footer id="contacto" class="footer   py-2 text-xs-center">
@@ -75,6 +48,14 @@
 <script>
 export default {
   name: "homecontent",
+  methods: {
+    scrollMeTo(refName) {
+      var element = this.$refs[refName];
+      console.log(element);
+      var top = element.offsetTop;
+      window.scrollTo(0, top);
+    }
+  },
   data() {
     return {
       nosotros: require("../assets/nosotros.svg"),
