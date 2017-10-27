@@ -1,20 +1,18 @@
 <template>
   <div id = "app">
+    <v-app>
     <topbar></topbar>
-    <homecontent></homecontent>
-
-
-    
+    <router-view></router-view>
+    </v-app>
   </div>
 </template>
 
 <script>
 import topbar from '@/components/TopBar'
-import homecontent from '@/components/HomeContent'
 
 export default {
   name: 'app',
-  components:{ topbar, homecontent}
+  components:{ topbar }
 }
 </script>
 
