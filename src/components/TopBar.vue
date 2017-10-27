@@ -16,19 +16,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="#">Nosotros</a>
                         </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#"> Servicios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Paradas</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Ruta</a>
-
-                        </li>
+                        
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contacto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
                         </li>
                     </ul>
                 </div>
