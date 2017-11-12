@@ -3,7 +3,7 @@
         <section id="bienvenidos" class="bienvenidos">
             <div class="texto-bienvenido text-xs-center">
                 <p class="h5">Bievenidos a nuestro sitio</p>
-                <h1 class="display-4 mb-3">UberSaltillo</h1>
+                <h1 class="display-4 mb-3">UberBus</h1>
                 <a href="#" class="btn btn-primary btn-lg">Ponte en contacto</a>
             </div>
         </section>
@@ -33,7 +33,7 @@
                     <div class="modal-body">
 
                         <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia saepe autem unde culpa temporibus qui labore eos. Ullam repellendus saepe laborum qui culpa, doloribus atque tempore aut eaque blanditiis, iste.
+                            Somos una compañia que busca mejorar los servicios de transporte en Saltillo.
                         </p>
                     </div>
                     <div class="modal-footer">
