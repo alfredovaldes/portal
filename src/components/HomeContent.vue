@@ -4,7 +4,7 @@
             <div class="texto-bienvenido text-xs-center">
                 <p class="h5">Bievenidos a nuestro sitio</p>
                 <h1 class="display-4 mb-3">UberBus</h1>
-                <a href="#" class="btn btn-primary btn-lg">Ponte en contacto</a>
+                
             </div>
         </section>
         <section id="quienes-somos" class="quienes-somos  py-2 text-xs-center">
@@ -12,7 +12,7 @@
                 <img :src="nosotros" alt="Nosotros" width="181" class="img-fluid my-auto mb-2 ">
                 <h2 class="h3">¿QUIENES SOMOS?</h2>
                 <p>Ponemos a tu alcance el servicio de localizacion de autobuses</p>
-                <a href="#" class="btn btn-secondary btn-lg" data-toggle="modal" data-target="#quienes-somos">MAS INFORMACIÓN</a>
+                
             </div>
         </section>
         <footer id="contacto" class="footer py-2 text-xs-center">
