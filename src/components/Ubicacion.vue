@@ -32,9 +32,9 @@
   export default {
     data () {
       return {
-        center: {lat: 25.416168, lng: -100.9522682}, 
+        center: {lat: 32.19304, lng: -114.99933}, 
         markers: [{
-          position: {lat: 25.416168, lng: -100.9522682}
+          position: {lat: 32.19304, lng: -114.99933}
         }, {
           position: {lat: 25.416168, lng: -100.9522682}
         }]

@@ -9,20 +9,20 @@
                 <div class="collapse navbar-toggleable-sm float-md-right" id="menuprincipal">
 
                     <ul class="nav navbar-nav">
+                       <li class="nav-item">
+                            <router-link to="/" class="nav-link">Inicio</router-link>
+                        </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#bienvenidos" v-smooth-scroll>Inicio</a>
+                            <router-link to="/nosotros" class="nav-link">Nosotros</router-link>
+                        </li>
+                        <li class="nav-item">
+                            <router-link to="contacto" class="nav-link">Contacto</router-link>
                         </li>
 
-                        <li class="nav-item">
-                            <a class="nav-link" href="#quienes-somos" v-smooth-scroll>Nosotros</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contacto" v-smooth-scroll>Contacto</a>
-                        </li>
                         <li class="nav-item">
                             <router-link to="login" class="nav-link">Login</router-link>
                         </li>
+                        
                     </ul>
                 </div>
             </div>
