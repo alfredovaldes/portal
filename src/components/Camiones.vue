@@ -32,14 +32,9 @@
             ></v-text-field>
           </v-edit-dialog>
         </td>
-
-       
         <td class="text-xs-right">{{ props.item.descripcion }}</td>
         <td class="text-xs-right">{{ props.item.placas }}</td>  
-          
       </template>
-
-
       <template slot="pageText" scope="{ pageStart, pageStop }">
         From {{ pageStart }} to {{ pageStop }}
       </template>
@@ -48,6 +43,8 @@
 </template>
 
 <script>
+import EndpointCamion from '@/services/EndpointCamion'
+
   export default {
     data () {
       return {
@@ -60,32 +57,26 @@
             text: 'Id',
             align: 'left',
             sortable: false,
-            value: 'Id'
-          },
-          
-          { text: 'Descripcion', value: 'descripcion' },
-          { text: 'Placas', value: 'placas' }
-          
-         
-        ],
-        items: [
-          {
-            value: false,
-            id: '1',
-            descripcion: 'amarillo',
-            placas:'568k78b'
-           
-           
+            value: 'id'
           },
           {
-            value: false,
-            id: '2',
-            descripcion: 'rojo',
-            placas:'1990k12b'
-           
+            text: 'Descripcion',
+            align: 'left',
+            sortable: false,
+            value: 'descripcion'
+          },
+          {
+            text: 'Placas',
+            align: 'left',
+            sortable: false,
+            value: 'placas'
           }
-        ]
+        ],
+        items: []
       }
+    },
+    async mounted () {
+      this.items = (await EndpointCamion.index()).data 
     }
   }
 </script>
