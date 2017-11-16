@@ -33,9 +33,6 @@
         </td>
         <td class="text-xs-right">{{ props.item.id }}</td>
         <td class="text-xs-right">{{ props.item.fotoChofer }}</td>
-
-        
-       
       </template>
       <template slot="pageText" scope="{ pageStart, pageStop }">
         From {{ pageStart }} to {{ pageStop }}

@@ -19,10 +19,6 @@
                   <v-flex xs8>
                     <div>
                       <div class="headline">Camion</div>
-                      <div>Agregar</div>
-                       <div>Consultar</div>
-                        <div>Modificar</div>
-                         <div>Eliminar</div>
                     </div>
                   </v-flex>
                   <v-flex xs8>
@@ -43,10 +39,7 @@
                   <v-flex xs8>
                     <div>
                       <div class="headline">Paradas</div>
-                      <div>Agregar</div>
-                       <div>Consultar</div>
-                        <div>Modificar</div>
-                         <div>Eliminar</div>
+                    
                     </div>
                   </v-flex>
                   <v-flex xs8>
@@ -67,10 +60,7 @@
                   <v-flex xs8>
                     <div>
                       <div class="headline">Chofer</div>
-                     <div>Agregar</div>
-                       <div>Consultar</div>
-                        <div>Modificar</div>
-                         <div>Eliminar</div>
+                     
                     </div>
                   </v-flex>
                   <v-flex xs8>
@@ -86,16 +76,13 @@
             </v-card>
           </v-flex>
           <v-flex xs8>
-            <v-card color="purple" class="white--text">
+            <v-card color="cyan darken-2" class="white--text">
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs8>
                     <div>
                       <div class="headline">Ruta</div>
-                      <div>Agregar</div>
-                       <div>Consultar</div>
-                        <div>Modificar</div>
-                         <div>Eliminar</div>
+                      
                     </div>
                   </v-flex>
                   <v-flex xs8>
