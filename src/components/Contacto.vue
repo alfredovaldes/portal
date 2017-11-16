@@ -52,18 +52,17 @@
             </v-list-tile-action>
             <v-list-tile-content>
               <v-list-tile-title>uberbussaltillo@example.com</v-list-tile-title>
-              <v-list-tile-sub-title>Work</v-list-tile-sub-title>
+              <v-list-tile-sub-title>Email-Work</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
-          
         <v-divider inset></v-divider>
           <v-list-tile @click="">
             <v-list-tile-action>
               <v-icon color="indigo">location_on</v-icon>
             </v-list-tile-action>
             <v-list-tile-content>
-              <v-list-tile-title>1400 Main Street</v-list-tile-title>
-              <v-list-tile-sub-title>Orlando, FL 79938</v-list-tile-sub-title>
+              <v-list-tile-title>25017 Sistemas</v-list-tile-title>
+              <v-list-tile-sub-title>Saltillo, Coahuila</v-list-tile-sub-title>
             </v-list-tile-content>
           </v-list-tile>
         </v-list>
@@ -72,4 +71,3 @@
   </v-layout>
 
 </template>
-
