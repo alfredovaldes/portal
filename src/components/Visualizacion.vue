@@ -1,7 +1,16 @@
 <template>
-  <gmap-map
+<div class="text-xs-center">
+    <v-menu offset-y>
+      <v-btn color="primary" dark slot="activator">Dropdown</v-btn>
+      <v-list>
+        <v-list-tile v-for="item in items" :key="item.title" @click="">
+          <v-list-tile-title>{{ item.title }}</v-list-tile-title>
+        </v-list-tile>
+      </v-list>
+    </v-menu>
+    <gmap-map
     :center="center"
-    :zoom="7"
+    :zoom="12"
     style="width: 800px; height: 600px"
   >
     <gmap-marker
@@ -13,6 +22,8 @@
       @click="center=m.position"
     ></gmap-marker>
   </gmap-map>
+  </div>
+  
 </template>
  
 <script>
@@ -37,7 +48,13 @@
           position: {lat: 25.416168, lng: -100.9522682}
         }, {
           position: {lat: 25.416168, lng: -100.9522682}
-        }]
+        }],
+        items: [
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me' },
+        { title: 'Click Me 2' }
+      ]
       }
     }
   }
