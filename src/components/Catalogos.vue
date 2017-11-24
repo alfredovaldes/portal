@@ -13,12 +13,13 @@
             </v-card>
           </v-flex>
           <v-flex xs8>
-            <v-card color="cyan darken-2" class="white--text">
+            <v-card color="deep-purple lighten-4" class="white--text">
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs8>
                     <div>
-                      <div class="headline">Camion</div>
+                       <router-link to="ruta" class="nav-link">Rutas</router-link>
+                      <div class="headline"></div>
                     </div>
                   </v-flex>
                   <v-flex xs8>
@@ -33,12 +34,13 @@
             </v-card>
           </v-flex>
             <v-flex xs8>
-            <v-card color="cyan darken-2" class="white--text">
+            <v-card color="deep-purple lighten-4" class="white--text">
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs8>
                     <div>
-                      <div class="headline">Paradas</div>
+                      <router-link to="camiones" class="nav-link">Camiones</router-link>
+                      <div class="headline"></div>
                     
                     </div>
                   </v-flex>
@@ -54,12 +56,13 @@
             </v-card>
           </v-flex>
           <v-flex xs8>
-           <v-card color="cyan darken-2" class="white--text">
+           <v-card color="deep-purple lighten-4" class="white--text">
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs8>
                     <div>
-                      <div class="headline">Chofer</div>
+                        <router-link to="choferes" class="nav-link">Choferes</router-link>
+                      <div class="headline"></div>
                      
                     </div>
                   </v-flex>
@@ -76,12 +79,13 @@
             </v-card>
           </v-flex>
           <v-flex xs8>
-            <v-card color="cyan darken-2" class="white--text">
+            <v-card color="deep-purple lighten-4" class="white--text">
               <v-container fluid grid-list-lg>
                 <v-layout row>
                   <v-flex xs8>
                     <div>
-                      <div class="headline">Ruta</div>
+                        <router-link to="paradas" class="nav-link">Paradas</router-link>
+                      <div class="headline"></div>
                       
                     </div>
                   </v-flex>

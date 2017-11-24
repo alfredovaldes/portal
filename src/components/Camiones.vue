@@ -14,14 +14,12 @@
     <v-data-table
         v-bind:headers="headers"
         v-bind:items="items"
-        v-bind:search="search"
-      >
+        v-bind:search="search">
       
-      <template slot="items" scope="props">
+      <template slot="items" slot-scope="props">
         <td>
           <v-edit-dialog
-            lazy
-          > {{ props.item.id }}
+            lazy> {{ props.item.id }}
             <v-text-field
               slot="input"
               label="Edit"
@@ -35,7 +33,7 @@
         <td class="text-xs-right">{{ props.item.descripcion }}</td>
         <td class="text-xs-right">{{ props.item.placas }}</td>  
       </template>
-      <template slot="pageText" scope="{ pageStart, pageStop }">
+      <template slot="pageText" slot-scope="{ pageStart, pageStop }">
         From {{ pageStart }} to {{ pageStop }}
       </template>
     </v-data-table>
