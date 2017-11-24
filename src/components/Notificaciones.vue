@@ -1,25 +1,28 @@
-import VueNotifications from 'vue-notifications';
-import miniToastr from 'mini-toastr';
-
-window.Vue.use(BlockUI);
-
-const toastTypes = {
-    success: 'success',
-    error: 'error',
-    info: 'info',
-    warn: 'warn'
-};
-
-miniToastr.init({types: toastTypes});
-
-function toast ({title, message, type, timeout, cb}) {
-    return miniToastr[type](message, title, timeout, cb)
+<template>
+<form>
+  <v-flex xs6>
+  <div class="form-group">
+    <h1 class="display-1 mb-3">
+  <label class="form-control-label" for="name">Rutas Saltillo</label>
+    </h1>
+  <input required id="name" name="name" class="form-control form-control-warning" 
+  type="text" > </div><!-- /form-group -->
+  
+  <button>Enviar Notificacion</button>
+  </v-flex>
+</form>
+</template>
+<style>
+button {
+ border: none;
+ background: #3a7999;
+ color: #f2f2f2;
+ padding: 10px;
+ font-size: 18px;
+ border-radius: 5px;
+ position: relative;
+ box-sizing: border-box;
+ transition: all 500ms ease;
 }
 
-const options = {
-    success: toast,
-    error: toast,
-    info: toast,
-    warn: toast
-};
-window.Vue.use(VueNotifications, options);
+</style>
