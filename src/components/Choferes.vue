@@ -16,7 +16,7 @@
         v-bind:items="items"
         v-bind:search="search"
       >
-      <template slot="items" slot-scope="props">
+      <template slot="items" scope="props">
         <td>
           <v-edit-dialog
             lazy
