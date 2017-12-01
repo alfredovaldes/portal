@@ -42,7 +42,7 @@ html {
 
 .texto-bienvenido {
   color: #fff;
-  margin-top: 9rem; }
+  margin-top: 15rem; }
 
 .btn-primary {
   background-color: #F05F40;
@@ -84,26 +84,24 @@ html {
           transition: all .3s ease;
   min-width: 100%; }
 
-.ultimos-proyectos a:hover img {
-  -webkit-transform: scale(1.5);
-      -ms-transform: scale(1.5);
-          transform: scale(1.5); }
-
+  
 /**Estilos bloque Pie de pagina*/
 .footer {
   color: #fff;
   background: #222222; }
 
 /*EMPIEZAN LOS MEDIAS QUERIES*/
-@media (min-width: 768px) {
+@media (min-width: 500px) {
   html {
-    font-size: 16px; }
+    font-size: 25px; }
 
   #menuprincipal {
     clear: inherit; }
 
   .bienvenidos {
     background: url("../images/saltillofondo.jpg");
-    background-size: cover; } }
+    background-size: cover; 
+    height: 120vh;
+  } }
 
 /*# sourceMappingURL=estilos.css.map */
