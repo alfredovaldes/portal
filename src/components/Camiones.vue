@@ -26,12 +26,11 @@
               v-model="props.item.id"
               single-line
               counter
-              :rules="[max50chars]"
-            ></v-text-field>
+              :rules="[max50chars]"></v-text-field>
           </v-edit-dialog>
-        </td>
-        <td class="text-xs-right">{{ props.item.descripcion }}</td>
-        <td class="text-xs-right">{{ props.item.placas }}</td>  
+          </td>
+        <td class="text-xs-center">{{ props.item.descripcion }}</td>
+        <td class="text-xs-center">{{ props.item.placas }}</td>  
       </template>
       <template slot="pageText" slot-scope="{ pageStart, pageStop }">
         From {{ pageStart }} to {{ pageStop }}
@@ -53,19 +52,19 @@ import EndpointCamion from '@/services/EndpointCamion'
         headers: [
           {
             text: 'Id',
-            align: 'left',
+            align: 'center',
             sortable: false,
             value: 'id'
           },
           {
             text: 'Descripcion',
-            align: 'left',
+            align: 'center',
             sortable: false,
             value: 'descripcion'
           },
           {
             text: 'Placas',
-            align: 'left',
+            align: 'center',
             sortable: false,
             value: 'placas'
           }

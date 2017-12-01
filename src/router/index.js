@@ -14,6 +14,8 @@ import Nosotros  from '@/components/Nosotros'
 import Choferes  from '@/components/Choferes'
 import Camiones  from '@/components/Camiones'
 import Ubicacion  from '@/components/Ubicacion'
+import Ruta from '@/components/Ruta'
+import Paradas from '@/components/Paradas'
 
 
 Vue.use(Router)
@@ -84,6 +86,16 @@ export default new Router({
           path: 'ubicacion',
           component: Ubicacion,
           name: 'Ubicacion'
+        },
+        {
+          path: 'ruta',
+          component: Ruta,
+          name: 'Ruta'
+        },
+        {
+          path: 'paradas',
+          component: Paradas,
+          name: 'Paradas'
         },
         {
           path: 'notificaciones',

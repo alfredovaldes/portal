@@ -41,11 +41,6 @@
       return {
         items: [
           { 
-            title: 'Dashboard', 
-            icon: 'dashboard',
-            path: '/dashboard' 
-          },
-          { 
             title: 'Catalogos', 
             icon: 'dns',
             path: '/dashboard/catalogos' 
@@ -59,11 +54,6 @@
             title: 'Visualizacion', 
             icon: 'visibility',
             path: '/dashboard/visualizacion' 
-          },
-          { 
-            title: 'Mensajes', 
-            icon: 'chat',
-            path: '/dashboard/mensajes'
           },
           { 
             title: 'Notificaciones', 

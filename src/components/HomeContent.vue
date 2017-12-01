@@ -2,8 +2,9 @@
     <div>
         <section id="bienvenidos" class="bienvenidos">
             <div class="texto-bienvenido text-xs-center">
-                <p class="h5">Bievenidos a nuestro sitio</p>
-                <h1 class="display-4 mb-3">UberBus</h1>
+                
+              <!--  <p class="h5">Bievenidos a nuestro sitio</p>-->
+                <!--<h1 class="display-5 mb-3">UberBus</h1>-->
                 
             </div>
         </section>
