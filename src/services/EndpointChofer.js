@@ -11,6 +11,6 @@ export default{
     return Api().post(`chofer`, obj)
   },
   put (obj) {
-    return Api().post(`chofer/${obj.id}`, obj)
+    return Api().put(`chofer/${obj.params.id}`, obj.body)
   }
 }

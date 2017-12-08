@@ -17,9 +17,12 @@
         v-bind:search="search"
       >
       <template slot="items" slot-scope="props">
+        <td class="text-xs-center">{{ props.item.id }}</td>
         <td>
           <v-edit-dialog
             lazy
+            large
+            @save="update(props.item)"
           > {{ props.item.nomChofer }}
             <v-text-field
               slot="input"
@@ -27,12 +30,11 @@
               v-model="props.item.nomChofer"
               single-line
               counter
-              :rules="[max50chars]"
+              
             ></v-text-field>
           </v-edit-dialog>
         </td>
-        <td class="text-xs-right">{{ props.item.id }}</td>
-        <td class="text-xs-right">{{ props.item.fotoChofer }}</td>
+        //<td class="text-xs-center">{{ props.item.fotoChofer }}</td>
       </template>
       <template slot="pageText" slot-scope="{ pageStart, pageStop }">
         From {{ pageStart }} to {{ pageStop }}
@@ -69,6 +71,19 @@ import EndpointChofer from '@/services/EndpointChofer'
           },
         ],
         items: []
+      }
+    },
+    methods:{
+      async update (este) {
+        let objUpdate = {
+          params:{
+            id: este.id
+          },
+          body:{
+            nomChofer: este.nomChofer
+          }
+        }
+        this.upd = (await EndpointChofer.put(objUpdate)).data
       }
     },
     async mounted () {
