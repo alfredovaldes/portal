@@ -34,7 +34,14 @@
             ></v-text-field>
           </v-edit-dialog>
         </td>
-        //<td class="text-xs-center">{{ props.item.fotoChofer }}</td>
+        
+        <td class="text-xs-right">
+          <div class="container">
+            <img v-if="props.item.fotoChofer" :src="`http://localhost:3000/chofer/${props.item.id}/foto`" height="128" width="128" />
+            <img v-else :src="imageSrc" class="image" >
+            <input @change="uploadImage($event, props.item)" type="file" name="photo" accept="image/*">
+          </div>
+        </td>
       </template>
       <template slot="pageText" slot-scope="{ pageStart, pageStop }">
         From {{ pageStart }} to {{ pageStop }}
@@ -70,7 +77,8 @@ import EndpointChofer from '@/services/EndpointChofer'
             value: 'fotoChofer'
           },
         ],
-        items: []
+        items: [],
+        imageSrc: 'https://drii.org/public/images/frontend/default-profile.png'
       }
     },
     methods:{
@@ -84,6 +92,38 @@ import EndpointChofer from '@/services/EndpointChofer'
           }
         }
         this.upd = (await EndpointChofer.put(objUpdate)).data
+      },
+      async getImg (este) {
+        let objUpdate = {
+          params:{
+            id: este.id
+          }
+        }
+        este.img = (await EndpointChofer.getPicture()).data
+      },
+      async uploadImage (e, item) {
+        console.log(e)
+        var files = e.target.files;
+        if(!files[0]) {
+          return;
+        }
+        var formData = new FormData();
+        formData.append('image', files[0])
+        var reader = new FileReader();
+        reader.onload = (e) => {
+          this.imageSrc = e.target.result;
+        };
+        let objUpdate = {
+          params:{
+            id: item.id
+          },
+          data:formData
+        }
+        try {
+          this.picUpd = (await EndpointChofer.postPicture(objUpdate)).data
+        } catch (error) {
+          console.log(error)
+        }
       }
     },
     async mounted () {
