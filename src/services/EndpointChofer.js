@@ -13,6 +13,9 @@ export default{
   put (obj) {
     return Api().put(`chofer/${obj.params.id}`, obj.body)
   },
+  delete (obj) {
+    return Api().delete(`chofer/${obj.params.id}`)
+  },
   getPicture () {
     return Api().get(`chofer/${obj.params.id}/foto`)
   },
