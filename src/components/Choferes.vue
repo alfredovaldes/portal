@@ -20,6 +20,7 @@
         <td>
           <v-edit-dialog
             lazy
+            large
           > {{ props.item.nomChofer }}
             <v-text-field
               slot="input"
@@ -28,6 +29,7 @@
               single-line
               counter
               :rules="[max50chars]"
+              @save="guardarNombre"
             ></v-text-field>
           </v-edit-dialog>
         </td>
@@ -42,37 +44,44 @@
 </template>
 
 <script>
-import EndpointChofer from '@/services/EndpointChofer'
-  export default {
-    data () {
-      return {
-        max25chars: (v) => v.length <= 25 || 'Input too long!',
-        tmp: '',
-        search: '',
-        pagination: {},
-        headers: [
-          {
-            text: 'id',
-            align: 'left',
-            sortable: false,
-            value: 'id'
-          },{
-            text: 'nombre',
-            align: 'left',
-            sortable: false,
-            value: 'nomChofer'
-          },{
-            text: 'foto',
-            align: 'left',
-            sortable: false,
-            value: 'fotoChofer'
-          },
-        ],
-        items: []
-      }
-    },
-    async mounted () {
-      this.items = (await EndpointChofer.index()).data 
+import EndpointChofer from "@/services/EndpointChofer";
+export default {
+  data() {
+    return {
+      max25chars: v => v.length <= 25 || "Input too long!",
+      tmp: "",
+      search: "",
+      pagination: {},
+      headers: [
+        {
+          text: "id",
+          align: "left",
+          sortable: false,
+          value: "id"
+        },
+        {
+          text: "nombre",
+          align: "left",
+          sortable: false,
+          value: "nomChofer"
+        },
+        {
+          text: "foto",
+          align: "left",
+          sortable: false,
+          value: "fotoChofer"
+        }
+      ],
+      items: []
+    };
+  },
+  methods: {
+    async guardarNombre() {
+      this.items = (await EndpointChofer.put()).data;
     }
+  },
+  async mounted() {
+    this.items = (await EndpointChofer.index()).data;
   }
+};
 </script>
