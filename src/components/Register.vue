@@ -29,6 +29,7 @@
             @click="register">
             Register
           </v-btn>
+          <p>Ya tienes cuenta? Ingresa desde <router-link to="/login">aquí</router-link></p>
         </div>
       </div>
     </v-flex>
@@ -36,12 +37,25 @@
 </template>
 
 <script>
+import firebase from 'firebase'
 export default {
   data () {
     return {
       email: '',
       password: '',
       error: null
+    }
+  },
+  methods: {
+    register: function() {
+      firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
+        function (user) {
+          alert('Tu cuenta ha sido creada')
+        },
+        function (err) {
+          alert('Ups... '+err.message)
+        }
+      )
     }
   }
 }

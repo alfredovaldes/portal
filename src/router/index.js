@@ -16,12 +16,18 @@ import Camiones  from '@/components/Camiones'
 import Ubicacion  from '@/components/Ubicacion'
 import Ruta from '@/components/Ruta'
 import Paradas from '@/components/Paradas'
+import firebase from 'firebase'
 
 
 Vue.use(Router)
 
-export default new Router({
+let router = new Router({
   routes: [
+    {
+      path: '*',
+      name: 'Home',
+      component: HomeContent
+    },
     {
       path: '/',
       name: 'Home',
@@ -50,7 +56,10 @@ export default new Router({
     {
       path: '/dashboard',
       component: Dashboard,
-      name: 'Dashboard',      
+      name: 'Dashboard',
+      meta: {
+        requiresAuth: true
+      },     
       children: [
         {
           path: 'catalogos',
@@ -102,8 +111,18 @@ export default new Router({
           component: Notificaciones,
           name: 'Notificaciones'
         }
-
       ]
     }
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  let currentUser = firebase.auth().currentUser;
+  let requiresAuth = to.matched.some(record => record.meta.requiresAuth);
+
+  if(requiresAuth && !currentUser) next('login')
+  else if (!requiresAuth && currentUser) next('dashboard/catalogos')
+  else next()
+})
+
+export default router

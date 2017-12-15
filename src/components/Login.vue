@@ -29,6 +29,7 @@
             @click="login">
             Login
           </v-btn>
+          <p>No tienes cuenta? Puedes registrarte <router-link to="/register">aquí</router-link></p>
         </div>
       </div>
     </v-flex>
@@ -36,7 +37,10 @@
 </template>
 
 <script>
+import firebase from 'firebase'
+
 export default {
+  name:'login',
   data () {
     return {
       email: '',
@@ -45,7 +49,18 @@ export default {
     }
   },
   methods: {
-    login () {
+    /*login () {
+      this.$router.replace('dashboard/catalogos')
+    }*/
+    login: function() {
+      firebase.auth().signInWithEmailAndPassword(this.email, this.password).then(
+        (user) => {
+          this.$router.replace('dashboard/catalogos')
+        },
+        function (err) {
+          alert('Usuario o password incorrecto')
+        }
+      )
     }
   }
 }

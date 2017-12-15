@@ -6,10 +6,15 @@ import router from './router'
 import Vuetify from 'vuetify'
 import vueSmoothScroll from 'vue-smooth-scroll'
 import('../node_modules/vuetify/dist/vuetify.min.css')
+import firebase from 'firebase'
+import config from './config'
 
 Vue.config.productionTip = false
 Vue.use(Vuetify)
 Vue.use(vueSmoothScroll)
+
+firebase.initializeApp(config.firebase)
+
 
 /* eslint-disable no-new */
 new Vue({
