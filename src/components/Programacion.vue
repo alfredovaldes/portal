@@ -33,7 +33,7 @@
           </v-flex>
         </v-layout>
          <div>
-          <v-btn color="error">Asignar cambios</v-btn>
+          <v-btn color="error" @click="post">Asignar cambios</v-btn>
        </div>
       </v-container>
     </v-card-text>
@@ -79,6 +79,18 @@ import EndpointCamion from '@/services/EndpointCamion'
     async mounted () {
       this.choferes = (await EndpointChofer.index()).data
       this.camiones = (await EndpointCamion.index()).data 
-    }   
+    },
+    methods:{
+      async post(){
+        let objUpd = {
+          body : {
+            idCamion:this.e2,
+            idChofer :this.e1
+          }
+        }
+        console.log(objUpd)
+        this.upd = (await EndpointCamion.postCamionChofer(objUpd)).data
+      }
+    }
   } 
 </script>

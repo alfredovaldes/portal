@@ -12,5 +12,12 @@ export default{
   },
   put (obj) {
     return Api().put(`camion/${obj.id}`, obj)
+  },
+  postCamionChofer (obj) {
+    return Api().post(`camion/camionchofer`, obj.body)
+  },
+  postCamionRuta (obj) {
+    return Api().post(`camion/camionruta`, obj.body)
   }
+
 }
