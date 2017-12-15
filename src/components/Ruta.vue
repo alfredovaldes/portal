@@ -19,9 +19,10 @@
       >
       <template slot="items" slot-scope="props">
         <td class="text-xs-center">
-            <v-btn fab dark small color="red" @click="borrar(props.item)">
-              <v-icon dark>clear</v-icon>
-            </v-btn>{{ props.item.id }}</td>
+          <v-btn fab dark small color="red" @click="borrar(props.item)">
+            <v-icon dark>clear</v-icon>
+          </v-btn>{{ props.item.id }}
+        </td>
         <td>
         <v-edit-dialog
             lazy

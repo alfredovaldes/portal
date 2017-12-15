@@ -8,9 +8,12 @@ export default{
     return Api().get(`parada/${id}`)
   },
   post (obj) {
-    return Api().post(`parada`, obj)
+    return Api().post(`parada`, obj.body)
   },
   put (obj) {
-    return Api().post(`parada/${obj.id}`, obj)
+    return Api().put(`parada/${obj.params.id}`, obj.body)
+  },
+  delete (obj) {
+    return Api().delete(`parada/${obj.params.id}`)
   }
 }
