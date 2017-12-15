@@ -23,6 +23,7 @@
               <v-icon dark>clear</v-icon>
             </v-btn>{{ props.item.id }}
           </td>
+          <td>
             <v-edit-dialog
               lazy
               large
