@@ -1,4 +1,5 @@
 <template>
+  <div>
   <v-card>
     <v-card-title>
       Datos de las Rutas
@@ -17,9 +18,15 @@
         v-bind:search="search"
       >
       <template slot="items" slot-scope="props">
+        <td class="text-xs-center">
+            <v-btn fab dark small color="red" @click="borrar(props.item)">
+              <v-icon dark>clear</v-icon>
+            </v-btn>{{ props.item.id }}</td>
         <td>
-          <v-edit-dialog
+        <v-edit-dialog
             lazy
+            large
+            @save="update(props.item)"
           > {{ props.item.nombre }}
             <v-text-field
               slot="input"
@@ -27,24 +34,51 @@
               v-model="props.item.nombre"
               single-line
               counter
-              :rules="[max50chars]"
             ></v-text-field>
           </v-edit-dialog>
         </td>
-        <td class="text-xs-right">{{ props.item.id }}</td>
-        <td class="text-xs-right">{{ props.item.nombreLargo }}</td>
-         <td class="text-xs-right">{{ props.item.nombreOrden }}</td>
-          <td class="text-xs-right">{{ props.item.trayecto }}</td>
-          <td class="text-xs-right">{{ props.item.tipo }}</td>
-          <td class="text-xs-right">{{ props.item.activo }}</td>
+        <td>
+          <v-edit-dialog
+            lazy
+            large
+            @save="update(props.item)"
+          > {{ props.item.nombreLargo }}
+            <v-text-field
+              slot="input"
+              label="Edit"
+              v-model="props.item.nombreLargo"
+              single-line
+              counter
+            ></v-text-field>
+          </v-edit-dialog>
+        </td>
+        <td>
+          <v-edit-dialog
+            lazy
+            large
+            @save="update(props.item)"
+          > {{ props.item.nombreOrden }}
+            <v-text-field
+              slot="input"
+              label="Edit"
+              v-model="props.item.nombreOrden"
+              single-line
+              counter
+            ></v-text-field>
+          </v-edit-dialog>
+        </td>
+        <td class="text-xs-right">{{ props.item.trayecto }}</td>
       </template>
       <template slot="pageText" slot-scope="{ pageStart, pageStop }">
         From {{ pageStart }} to {{ pageStop }}
       </template>
     </v-data-table>
   </v-card>
+  <NewRuta />
+  </div>
 </template>
 <script>
+import NewRuta from '@/components/NewRuta'
 import EndpointRuta from '@/services/EndpointRuta'
 
   export default {
@@ -84,26 +118,38 @@ import EndpointRuta from '@/services/EndpointRuta'
             align: 'left',
             sortable: false,
             value: 'trayecto'
-          },
-           {
-            text: 'tipo',
-            align: 'left',
-            sortable: false,
-            value: 'tipo'
-          },
-           {
-            text: 'activo',
-            align: 'left',
-            sortable: false,
-            value: 'activo'
           }
         ],
         items: []
       }
     },
     async mounted () {
-      this.items = (await EndpointParada.index()).data 
-    }
+      this.items = (await EndpointRuta.index()).data 
+    },
+    methods : {
+      async update (este) {
+        let objUpdate = {
+          params:{
+            id: este.id
+          },
+          body:{
+            nombre: este.nombre,
+            nombreLargo: este.nombreLargo,
+            nombreOrden: este.nombreOrden
+          }
+        }
+        this.upd = (await EndpointRuta.put(objUpdate)).data
+      },
+      async borrar (este){
+        let objUpdate = {
+          params:{
+            id: este.id
+          }
+        }
+        this.del = (await EndpointRuta.delete(objUpdate)).data
+      }
+    },
+    components:{ NewRuta }
   }
 </script>
 

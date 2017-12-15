@@ -8,9 +8,12 @@ export default{
     return Api().get(`ruta/${id}`)
   },
   post (obj) {
-    return Api().post(`ruta`, obj)
+    return Api().post(`ruta`, obj.body)
   },
   put (obj) {
-    return Api().post(`ruta/${obj.id}`, obj)
+    return Api().put(`ruta/${obj.params.id}`, obj.body)
+  },
+  delete (obj) {
+    return Api().delete(`ruta/${obj.params.id}`)
   }
 }

@@ -19,10 +19,10 @@
         >
         <template slot="items" slot-scope="props">
           <td class="text-xs-center">
-            <v-btn fab dark small color="red" @click="borrarALV(props.item)">
+            <v-btn fab dark small color="red" @click="borrar(props.item)">
               <v-icon dark>clear</v-icon>
-            </v-btn>{{ props.item.id }}</td>
-          <td>
+            </v-btn>{{ props.item.id }}
+          </td>
             <v-edit-dialog
               lazy
               large
@@ -134,7 +134,7 @@ import EndpointChofer from '@/services/EndpointChofer'
         } catch (error) {
         }
       },
-      async borrarALV (este){
+      async borrar (este){
         let objUpdate = {
           params:{
             id: este.id
