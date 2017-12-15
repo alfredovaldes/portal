@@ -20,7 +20,6 @@ export default{
     return Api().get(`chofer/${obj.params.id}/foto`)
   },
   postPicture (obj) {
-    console.log(obj)
     return Api().post(`chofer/${obj.params.id}/foto`, obj.data, {headers: { 'Content-Type': 'imageFile.type' } })
   }
 }

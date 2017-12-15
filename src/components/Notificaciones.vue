@@ -24,7 +24,6 @@ export default {
   methods: {
     async sendNotification() {
       var element = this.mensaje;
-      console.log(element);
       this.notificacion = (await EndpointNotificacion.post({mensaje:mensaje})).data 
     }
   }

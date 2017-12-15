@@ -44,7 +44,8 @@
   export default {
     data () {
       return {
-        center: {lat: 25.416168, lng: -100.9522682}, 
+        center: {lat: 25.4420423, lng: -100.9522682}, 
+        markers: [],
         items: []
       }
     },
@@ -52,7 +53,7 @@
       this.items = (await EndpointCamion.index()).data 
       for (let item of this.items){
         item.position = (await EndpointPosicion.show(item.id)).data
-        console.log(item.position)
+        this.center={lat: 25.4420423, lng: -100.9522682}
        }
     }
   }

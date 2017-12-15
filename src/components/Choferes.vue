@@ -113,7 +113,6 @@ import EndpointChofer from '@/services/EndpointChofer'
         este.img = (await EndpointChofer.getPicture()).data
       },
       async uploadImage (e, item) {
-        console.log(e)
         var files = e.target.files;
         if(!files[0]) {
           return;
@@ -133,7 +132,6 @@ import EndpointChofer from '@/services/EndpointChofer'
         try {
           this.picUpd = (await EndpointChofer.postPicture(objUpdate)).data
         } catch (error) {
-          console.log(error)
         }
       },
       async borrarALV (este){

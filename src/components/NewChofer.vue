@@ -25,7 +25,6 @@ export default {
   },
   methods:{
     async post (este) {
-      console.log(este)
       let body = {
         nomChofer: este
       }
